@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 .container {
-	display: flex;
-	height: 100vh;
-	flex-direction: column;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
 }
 
 footer {
-	margin-top: auto;
+  margin-top: auto;
 }
