@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.container {
-	display: flex;
-	height: 100vh;
-	flex-direction: column;
+.frame {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
 }
 
 footer {
-	margin-top: auto;
+  margin-top: auto;
 }
