@@ -8,11 +8,11 @@ function Root() {
   return (
     <div className="frame">
       <Navbar />
+      <SelectBgLogo />
+      <SweatCustom />
       <div className="w-[90%] mt-10 mx-auto">
         <Outlet />
       </div>
-      <SelectBgLogo />
-      <SweatCustom />
       <Footer />
     </div>
   );
