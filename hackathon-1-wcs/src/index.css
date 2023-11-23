@@ -4,6 +4,8 @@ footer {
   margin-top: auto;
 }
 
+
+
 /* CAROUSEL */
 
 .carousel-container {
@@ -51,7 +53,7 @@ body {
 }
 
 .aboutus-container video {
-  width: 100%;
+  width: auto;
   height: auto;
 }
 

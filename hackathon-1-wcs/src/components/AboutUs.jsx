@@ -8,7 +8,7 @@ function AboutUs() {
       </video>
       <Link to="/">
         <div className="aboutus-button">
-          <img src="./home-picto-05.png" alt="hub" />
+          <img src="./home-picto-05.png" alt="home" />
         </div>
       </Link>
     </div>

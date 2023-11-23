@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import "./header.css";
+import Playginmusic from "./Music.jsx";
 
 function Header() {
   return (
@@ -7,14 +9,13 @@ function Header() {
       <h1>Ugly Christmas Jumper Maker</h1>
       <nav className="header-nav">
         <ul className="possibilities">
-          <li>Accueil</li>
+          <Link to="/">
+            <div className="home-button">
+              <img src="./home-picto-05.png" alt="home" />
+            </div>
+          </Link>{" "}
         </ul>
-
-        <img
-          id="soundbutton"
-          src="./src/assets/motifs/son.png"
-          alt="haut-parleur"
-        />
+        <Playginmusic />
       </nav>
     </header>
   );
