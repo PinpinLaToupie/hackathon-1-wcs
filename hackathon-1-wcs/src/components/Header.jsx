@@ -9,6 +9,12 @@ function Header() {
         <ul className="possibilities">
           <li>Accueil</li>
         </ul>
+
+        <img
+          id="soundbutton"
+          src="./src/assets/motifs/son.png"
+          alt="haut-parleur"
+        />
       </nav>
     </header>
   );
