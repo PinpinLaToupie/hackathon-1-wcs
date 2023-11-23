@@ -1,13 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-.frame {
-  display: flex;
-  height: 100vh;
-  flex-direction: column;
-}
-
 footer {
   margin-top: auto;
+  display: flex;
+  align-items: end;
 }

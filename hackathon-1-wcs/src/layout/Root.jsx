@@ -1,11 +1,11 @@
 import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import Header from "../components/Header";
 import { Outlet } from "react-router-dom";
 
 function Root() {
   return (
     <div className="frame">
-      <Navbar />
+      <Header />
       <div className="w-[90%] mt-10 mx-auto">
         <Outlet />
       </div>
