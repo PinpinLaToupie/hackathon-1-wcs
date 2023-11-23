@@ -12,8 +12,9 @@ footer {
 
 .carousel-container {
   width: 80%;
-  margin: 0 auto;
+  margin: auto;
   text-align: center;
+  margin-top: -60px;
 }
 
 .carousel-slide {
@@ -24,8 +25,8 @@ footer {
   max-width: 60%;
   max-height: 250px;
   border: 2px solid #E75656;
-  border-radius: 8px;
-  margin: 1rem;
+  border-radius: 10px;
+  margin: 0.5rem;
 }
 
 .sweat-custom-container {
