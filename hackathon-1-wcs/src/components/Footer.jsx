@@ -1,7 +1,7 @@
 function Footer() {
 	return (
 		<footer>
-			<p>Créer avec ❤️ par _votre_team_ </p>
+			<p>©Ugly Christmas Jumper Maker</p>
 		</footer>
 	);
 }
