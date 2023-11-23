@@ -82,17 +82,18 @@ const SweatCustom = ({ selectedImage }) => {
     stage.add(layer);
   };
 
-  return <div ref={containerRef}></div>;
+  return <div className="sweat-custom-container" ref={containerRef}></div>;
 };
 
 const SelectBgLogo = () => {
   const [selectedImage, setSelectedImage] = useState(
     "/src/assets/motifs/50.png"
   );
+
   const [selectedPull, setSelectedPull] = useState("/pull1.1.png");
 
   return (
-    <div>
+    <>
       <SweatCustom selectedImage={selectedImage} selectedPull={selectedPull} />
       <div className="Container">
         <div className="pulls-container">
@@ -109,11 +110,9 @@ const SelectBgLogo = () => {
           ))}
         </div>
         <img className="pullSelector" src={selectedPull} alt="Selected Pull" />
-        <p className="textSelector">Choose a logo !:</p>
-    <div className="convastest">
-      <SweatCustom selectedImage={selectedImage} />
-      <h1 className="textSelector">Choose a logo !:</h1>
-      <div className="Container">
+      </div>
+      <div className="convastest">
+        <h1 className="textSelector">Choose a logo !:</h1>
         <img src="../assets/laine-pull.png" />
         {motifs.map((imagePath, index) => (
           <img
@@ -125,7 +124,7 @@ const SelectBgLogo = () => {
           />
         ))}
       </div>
-    </div>
+    </>
   );
 };
 

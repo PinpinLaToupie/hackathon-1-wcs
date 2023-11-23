@@ -7,20 +7,20 @@
 
 .Container {
   display: grid;
-grid-template-columns: repeat(15, 1fr);
+  grid-template-columns: repeat(15, 1fr);
   background-color: #e75656;
-  margin-bottom: 80px;
 
 }
 
 .Container img {
   object-fit: scale-down;
-  
+}
+.convastest {
+  margin-bottom: 80px
 }
 
 canvas {
   background-color: black;
-
 }
 
 .textSelector {
@@ -28,42 +28,40 @@ canvas {
   text-align: center;
   background-color: #517751;
   margin-top: 0;
-
-
 }
 
 .sweat-custom-container {
-    background-image: url("/Calque_1.png");
-    background-repeat: no-repeat;
-    background-color: #517751;
-max-width: 70%;
-margin: auto;
-max-height: 500px;
-display: flex;
-justify-content: center;
+  background-image: url("/Calque_1.png");
+  background-repeat: no-repeat;
+  background-color: #517751;
+  /* max-width: 70%;
+  margin: auto; */
+  max-height: 500px;
+  display: flex;
+  justify-content: center;
 }
 
 .sweat-custom-container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .draggable-image {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
 }
 
 .konvajs-content {
-    width: 80%;
-    height: 80%;
-    background-repeat: no-repeat;
+  width: 80%;
+  height: 80%;
+  background-repeat: no-repeat;
 }
 
 .frame {
-    display: flex;
+  display: flex;
 
-    flex-direction: column;
+  flex-direction: column;
 }
