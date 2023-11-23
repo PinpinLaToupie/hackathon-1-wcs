@@ -1,16 +1,16 @@
 import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import Header from "../components/Header";
 import { Outlet } from "react-router-dom";
-import SweatCustom from "../components/SweatCustom";
+import SelectBgLogo from "../components/selectBgLogo";
 
 function Root() {
   return (
     <div className="frame">
-      <Navbar />
+      <Header />
+      <SelectBgLogo />
       <div className="w-[90%] mt-10 mx-auto">
         <Outlet />
       </div>
-      <SweatCustom />
       <Footer />
     </div>
   );

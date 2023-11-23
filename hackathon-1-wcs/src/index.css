@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .frame {
   display: flex;
   height: 100vh;
@@ -12,8 +18,9 @@ footer {
 
 .carousel-container {
   width: 80%;
-  margin: 0 auto;
+  margin: auto;
   text-align: center;
+  margin-top: -60px;
 }
 
 .carousel-slide {
@@ -23,9 +30,9 @@ footer {
 .carousel-image {
   max-width: 60%;
   max-height: 250px;
-  border: 2px solid #E75656;
-  border-radius: 8px;
-  margin: 1rem;
+  border: 2px solid #e75656;
+  border-radius: 10px;
+  margin: 0.5rem;
 }
 
 .sweat-custom-container {
@@ -50,7 +57,5 @@ footer {
 
 body {
   background-image: url("./assets/Background2.png");
-  object-fit:scale-down;
-  
+  object-fit: cover;
 }
-

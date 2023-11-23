@@ -5,7 +5,6 @@ import "slick-carousel/slick/slick-theme.css";
 function App() {
   return (
     <div>
-      <h1 className="text-pink-500">Ugly Christmas Jumper Maker</h1>
       <Carousel />
     </div>
   );
