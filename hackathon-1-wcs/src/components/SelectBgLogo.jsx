@@ -86,21 +86,19 @@ const CombinedComponent = () => {
   return (
     <div>
       <SweatCustom selectedImage={selectedImage} />
-      <p>Choose a motif:</p>
-      {motifs.map((imagePath, index) => (
-        <img
-          key={index}
-          src={imagePath}
-          alt={`Image ${index + 1}`}
-          style={{
-            width: "50px",
-            height: "50px",
-            marginRight: "10px",
-            cursor: "pointer",
-          }}
-          onClick={() => setSelectedImage(imagePath)}
-        />
-      ))}
+      <div className="Container">
+        <img src="../assets/laine-pull.png" />
+        <p className="textSelector">Choose a logo !:</p>
+        {motifs.map((imagePath, index) => (
+          <img
+            key={index}
+            src={imagePath}
+            alt={`Image ${index + 1}`}
+            className="selected"
+            onClick={() => setSelectedImage(imagePath)}
+          />
+        ))}
+      </div>
     </div>
   );
 };

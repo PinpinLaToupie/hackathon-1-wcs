@@ -24,7 +24,7 @@ footer {
 .carousel-image {
   max-width: 60%;
   max-height: 250px;
-  border: 2px solid #E75656;
+  border: 2px solid #e75656;
   border-radius: 10px;
   margin: 0.5rem;
 }
@@ -49,10 +49,31 @@ footer {
   background-repeat: no-repeat;
 }
 
-body {
-  background-image: url("./assets/Background2.png");
-  object-fit:cover;
-
-  
+body,
+html {
+  height: 100%;
+  margin: 0;
 }
 
+body {
+  background-image: url("./assets/Background2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.selected {
+  width: 100px;
+  height: auto;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.Container {
+  display: flex;
+  background-color: red;
+  object-fit: fill;
+}
+
+.textSelector {
+  color: red;
+}
