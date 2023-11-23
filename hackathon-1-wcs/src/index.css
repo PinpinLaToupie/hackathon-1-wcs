@@ -50,7 +50,8 @@ footer {
 
 body {
   background-image: url("./assets/Background2.png");
-  object-fit:scale-down;
+  object-fit:cover;
+
   
 }
 
