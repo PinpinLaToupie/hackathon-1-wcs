@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import Konva from "konva";
 
+import "./selectBgLogo.css";
+
 const motifs = [
   "/src/assets/motifs/50.png",
   "/src/assets/motifs/dauphin.png",
@@ -84,11 +86,12 @@ const CombinedComponent = () => {
   );
 
   return (
-    <div>
+    <div className="convastest">
       <SweatCustom selectedImage={selectedImage} />
+      <h1 className="textSelector">Choose a logo !:</h1>
       <div className="Container">
         <img src="../assets/laine-pull.png" />
-        <p className="textSelector">Choose a logo !:</p>
+
         {motifs.map((imagePath, index) => (
           <img
             key={index}
