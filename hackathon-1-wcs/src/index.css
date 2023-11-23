@@ -76,4 +76,43 @@ body {
 
 .textSelector {
   color: red;
+  object-fit: cover;
+}
+
+/* ABOUT US */
+
+.aboutus-container {
+  position: relative;
+  width: auto;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.aboutus-container video {
+  width: 100%;
+  height: auto;
+}
+
+.transparent-button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #fff;
+}
+
+.aboutus-button {
+  position: absolute;
+  top: 10%;
+  left: 93%;
+  transform: translate(-1%, -1%);
+  width: 35px;
+  height: 35px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.5s;
 }
