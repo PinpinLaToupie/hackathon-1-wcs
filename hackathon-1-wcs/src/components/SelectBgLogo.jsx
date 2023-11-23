@@ -56,8 +56,8 @@ const SweatCustom = ({ selectedImage }) => {
   const drawImage = (imageObj, width, height) => {
     const stage = new Konva.Stage({
       container: containerRef.current,
-      width: width,
-      height: height,
+      width: 1500,
+      height: 500,
     });
 
     const layer = new Konva.Layer();
@@ -91,11 +91,17 @@ const SelectBgLogo = () => {
   );
 
   const [selectedPull, setSelectedPull] = useState("/pull1.1.png");
-
+  console.log(selectedImage);
   return (
     <>
-      <SweatCustom selectedImage={selectedImage} selectedPull={selectedPull} />
+      <div className="test">
+        <SweatCustom
+          selectedImage={selectedImage}
+          selectedPull={selectedPull}
+        />
+      </div>
       <div className="Container">
+        <h1 className="textSelector">Choose a logo !:</h1>
         <div className="pulls-container">
           {motifPulls.map((pullPath, index) => (
             <img
@@ -111,9 +117,9 @@ const SelectBgLogo = () => {
         </div>
         <img className="pullSelector" src={selectedPull} alt="Selected Pull" />
       </div>
-      <div className="convastest">
-        <h1 className="textSelector">Choose a logo !:</h1>
-        <img src="../assets/laine-pull.png" />
+
+      <div className="img-selector">
+        {/* <img src="../assets/laine-pull.png" /> */}
         {motifs.map((imagePath, index) => (
           <img
             key={index}
