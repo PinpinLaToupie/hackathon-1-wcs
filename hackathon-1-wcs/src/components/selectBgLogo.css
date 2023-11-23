@@ -9,25 +9,25 @@
   background-color: #e75656;
 }
 .pulls-container {
-    display: grid;
-      grid-template-columns: repeat(15, 1fr);
-      background-color: #e75656;
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  background-color: #e75656;
 }
 .Container img {
   object-fit: scale-down;
 }
 .img-selector {
-  margin-bottom: 80px
+  margin-bottom: 80px;
 }
 
-.Container h1{
-color: white;
-font-family: Arial, Helvetica, sans-serif;
+.Container h1 {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 canvas {
-height: 200px;
-width: 100%;
+  height: 200px;
+  width: 100%;
 }
 
 .textSelector {
@@ -41,7 +41,6 @@ width: 100%;
   background-image: url("/Calque_1.png");
   background-repeat: no-repeat;
   max-height: 500px;
-
 }
 
 .sweat-custom-container {
@@ -67,7 +66,6 @@ width: 100%;
   display: flex;
   flex-direction: column;
 }
-
 
 .selected motif {
   width: 100px;
@@ -100,4 +98,9 @@ width: 100%;
 .textSelector {
   color: red;
   object-fit: cover;
+}
+
+canvas {
+  width: 1500px;
+  height: auto;
 }
