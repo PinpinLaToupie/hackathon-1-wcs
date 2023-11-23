@@ -27,6 +27,15 @@ const motifs = [
   "/src/assets/motifs/vache.png",
 ];
 
+const motifPulls = [
+  "/pull1.1.png",
+  "/pull2.2.png",
+  "/pull3.3.png",
+  "/pull4.4.png",
+  "/pull5.5.png",
+  "/pull6.6.png",
+];
+
 const SweatCustom = ({ selectedImage }) => {
   const containerRef = useRef(null);
 
@@ -71,30 +80,40 @@ const SweatCustom = ({ selectedImage }) => {
     stage.add(layer);
   };
 
-  return (
-    <div>
-      <div className="sweat-custom-container" ref={containerRef}></div>
-    </div>
-  );
+  return <div ref={containerRef}></div>;
 };
 
-const CombinedComponent = () => {
+const SelectBgLogo = () => {
   const [selectedImage, setSelectedImage] = useState(
     "/src/assets/motifs/50.png"
   );
+  const [selectedPull, setSelectedPull] = useState("/pull1.1.png");
 
   return (
     <div>
-      <SweatCustom selectedImage={selectedImage} />
+      <SweatCustom selectedImage={selectedImage} selectedPull={selectedPull} />
       <div className="Container">
-        <img src="../assets/laine-pull.png" />
+        <div className="pulls-container">
+          {motifPulls.map((pullPath, index) => (
+            <img
+              key={index}
+              src={pullPath}
+              alt={`Pull ${index + 1}`}
+              className={
+                selectedPull === pullPath ? "selected-pull pull" : "pull"
+              }
+              onClick={() => setSelectedPull(pullPath)}
+            />
+          ))}
+        </div>
+        <img className="pullSelector" src={selectedPull} alt="Selected Pull" />
         <p className="textSelector">Choose a logo !:</p>
         {motifs.map((imagePath, index) => (
           <img
             key={index}
             src={imagePath}
             alt={`Image ${index + 1}`}
-            className="selected"
+            className={selectedImage === imagePath ? "selected motif" : "motif"}
             onClick={() => setSelectedImage(imagePath)}
           />
         ))}
@@ -103,4 +122,4 @@ const CombinedComponent = () => {
   );
 };
 
-export default CombinedComponent;
+export default SelectBgLogo;

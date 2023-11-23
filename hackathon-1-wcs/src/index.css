@@ -61,17 +61,32 @@ body {
   background-repeat: no-repeat;
 }
 
-.selected {
+.selected motif {
   width: 100px;
   height: auto;
   margin-right: 10px;
   cursor: pointer;
 }
 
-.Container {
-  display: flex;
-  background-color: red;
-  object-fit: fill;
+.motif {
+  width: 100px;
+  height: auto;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.pull {
+  width: 100px;
+  height: auto;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.pullSelector {
+  width: 100px;
+  height: auto;
+  margin-right: 10px;
+  cursor: pointer;
 }
 
 .textSelector {
