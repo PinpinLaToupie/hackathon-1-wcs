@@ -49,8 +49,33 @@ footer {
   background-repeat: no-repeat;
 }
 
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
 body {
   background-image: url("./assets/Background2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.selected {
+  width: 100px;
+  height: auto;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.Container {
+  display: flex;
+  background-color: red;
+  object-fit: fill;
+}
+
+.textSelector {
+  color: red;
   object-fit: cover;
 }
 
