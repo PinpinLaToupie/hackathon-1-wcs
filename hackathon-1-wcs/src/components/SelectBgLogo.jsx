@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import Konva from "konva";
 
+import "./selectBgLogo.css";
+
 const motifs = [
   "/src/assets/motifs/50.png",
   "/src/assets/motifs/dauphin.png",
@@ -108,6 +110,11 @@ const SelectBgLogo = () => {
         </div>
         <img className="pullSelector" src={selectedPull} alt="Selected Pull" />
         <p className="textSelector">Choose a logo !:</p>
+    <div className="convastest">
+      <SweatCustom selectedImage={selectedImage} />
+      <h1 className="textSelector">Choose a logo !:</h1>
+      <div className="Container">
+        <img src="../assets/laine-pull.png" />
         {motifs.map((imagePath, index) => (
           <img
             key={index}
