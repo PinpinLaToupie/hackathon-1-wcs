@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import Konva from "konva";
 
 const motifs = [
   "/src/assets/motifs/50.png",
@@ -26,35 +27,80 @@ const motifs = [
   "/src/assets/motifs/vache.png",
 ];
 
-function SelectBgLogo({ onLogoSelect }) {
-  const [selectedImage, setSelectedImage] = useState(null);
+const SweatCustom = ({ selectedImage }) => {
+  const containerRef = useRef(null);
 
-  const handleImageSelect = (imagePath) => {
-    setSelectedImage(imagePath);
-    onLogoSelect(imagePath);
+  useEffect(() => {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    const imageObj = new Image();
+    imageObj.onload = function () {
+      drawImage(imageObj, width, height);
+    };
+
+    imageObj.src = selectedImage;
+  }, [containerRef, selectedImage]);
+
+  const drawImage = (imageObj, width, height) => {
+    const stage = new Konva.Stage({
+      container: containerRef.current,
+      width: width,
+      height: height,
+    });
+
+    const layer = new Konva.Layer();
+    const darthVaderImg = new Konva.Image({
+      image: imageObj,
+      x: stage.width() / 2 - 200 / 2,
+      y: stage.height() / 2 - 137 / 2,
+      width: 200,
+      height: 137,
+      draggable: true,
+    });
+
+    darthVaderImg.on("mouseover", function () {
+      document.body.style.cursor = "pointer";
+    });
+
+    darthVaderImg.on("mouseout", function () {
+      document.body.style.cursor = "default";
+    });
+
+    layer.add(darthVaderImg);
+    stage.add(layer);
   };
 
   return (
     <div>
-      <p>Image sélectionnée : {selectedImage}</p>
-      <div>
+      <div className="sweat-custom-container" ref={containerRef}></div>
+    </div>
+  );
+};
+
+const CombinedComponent = () => {
+  const [selectedImage, setSelectedImage] = useState(
+    "/src/assets/motifs/50.png"
+  );
+
+  return (
+    <div>
+      <SweatCustom selectedImage={selectedImage} />
+      <div className="Container">
+        <img src="../assets/laine-pull.png" />
+        <p className="textSelector">Choose a logo !:</p>
         {motifs.map((imagePath, index) => (
           <img
             key={index}
             src={imagePath}
             alt={`Image ${index + 1}`}
-            style={{
-              width: "100px",
-              height: "100px",
-              marginRight: "10px",
-              cursor: "pointer",
-            }}
-            onClick={() => handleImageSelect(imagePath)}
+            className="selected"
+            onClick={() => setSelectedImage(imagePath)}
           />
         ))}
       </div>
     </div>
   );
-}
+};
 
-export default SelectBgLogo;
+export default CombinedComponent;
