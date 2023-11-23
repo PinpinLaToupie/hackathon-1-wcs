@@ -5,13 +5,9 @@
   cursor: pointer;
 }
 
-.Container {
-  background-color: #e75656;
-}
 .pulls-container {
   display: grid;
   grid-template-columns: repeat(15, 1fr);
-  background-color: #e75656;
 }
 .Container img {
   object-fit: scale-down;
@@ -33,7 +29,6 @@ canvas {
 .textSelector {
   color: white;
   text-align: center;
-  /* background-color: #517751; */
   margin-top: 0;
 }
 
@@ -41,9 +36,6 @@ canvas {
   background-image: url("/Calque_1.png");
   background-repeat: no-repeat;
   max-height: 500px;
-}
-
-.sweat-custom-container {
   display: flex;
   justify-content: center;
 }
@@ -67,7 +59,7 @@ canvas {
   flex-direction: column;
 }
 
-.selected motif {
+.selected .motif {
   width: 100px;
   height: auto;
   margin-right: 10px;
@@ -86,21 +78,4 @@ canvas {
   height: auto;
   margin-right: 10px;
   cursor: pointer;
-}
-
-.pullSelector {
-  width: 100px;
-  height: auto;
-  margin-right: 10px;
-  cursor: pointer;
-}
-
-.textSelector {
-  color: red;
-  object-fit: cover;
-}
-
-canvas {
-  width: 1500px;
-  height: auto;
 }

@@ -95,10 +95,10 @@ const SweatCustom = ({ selectedImage, selectedPull }) => {
 
     const pullImg = new Konva.Image({
       image: pullImageObj,
-      x: stage.width() / 2 - 200 / 2,
-      y: stage.height() / 2 - 137 / 2,
-      width: 200,
-      height: 137,
+      x: stage.width() / 2 - 170 / 2,
+      y: stage.height() / 2 - 550 / 2,
+      width: 600,
+      height: 540,
     });
 
     layer.add(pullImg);
