@@ -4,6 +4,7 @@ import Root from "./layout/Root.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import Page404 from "./pages/Page404.jsx";
+import AboutUs from "./components/AboutUs";
 
 const router = createBrowserRouter([
   {
@@ -14,10 +15,10 @@ const router = createBrowserRouter([
         path: "/",
         element: <App />,
       },
-      // {
-      // 	path: "your path",
-      // 	element: <Your components />,
-      // },
+      {
+        path: "/aboutus",
+        element: <AboutUs />,
+      },
     ],
   },
   {

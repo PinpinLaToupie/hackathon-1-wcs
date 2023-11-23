@@ -1,19 +1,21 @@
-// Footer.jsx
+import { Link } from "react-router-dom";
 
 function Footer() {
   const footerStyle = {
     padding: "10px",
     textAlign: "center",
-  };
-
-  const paragraphStyle = {
-    margin: "10px",
-    color: "white",
+	marginTop: "15px",
   };
 
   return (
     <footer style={footerStyle}>
-      <p style={paragraphStyle}>© Ugly Christmas Jumper Maker</p>
+      <div>
+        <Link to="/aboutus">
+          <button type="button" className="transparent-button">
+            © Ugly Christmas Jumper Maker
+          </button>
+        </Link>
+      </div>
     </footer>
   );
 }
