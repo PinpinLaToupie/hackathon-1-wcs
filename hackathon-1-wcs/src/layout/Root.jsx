@@ -7,10 +7,10 @@ function Root() {
   return (
     <div className="frame">
       <Header />
+      <SelectBgLogo />
       <div className="w-[90%] mt-10 mx-auto">
         <Outlet />
       </div>
-      <SelectBgLogo />
       <Footer />
     </div>
   );
