@@ -23,9 +23,9 @@ function Playginmusic() {
     <div className="home-container">
       <button type="button" onClick={toggleMusic} className="music-toggle">
         {isMusicPlaying ? (
-          <img src="hp-on.png" alt="Sound On" />
+          <img src="hp-off.png" alt="Sound On" />
         ) : (
-          <img src="hp-off.png" alt="Sound Off" />
+          <img src="hp-on.png" alt="Sound Off" />
         )}
       </button>
       <audio id="background-music" loop>

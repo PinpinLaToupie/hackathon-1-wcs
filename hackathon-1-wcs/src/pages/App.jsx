@@ -50,19 +50,24 @@ const Carousel = () => {
   };
 
   return (
-    <div className="carousel-container">
-      <Slider {...settings}>
-        {imgCarrousel.map((image, index) => (
-          <div key={index} className="carousel-slide">
-            <img
-              src={image}
-              alt={`Slide ${index + 1}`}
-              className="carousel-image"
-            />
-          </div>
-        ))}
-      </Slider>
-    </div>
+    <>
+      <div>
+        <h1 className="carouselTitle">Our collection</h1>
+      </div>
+      <div className="carousel-container">
+        <Slider {...settings}>
+          {imgCarrousel.map((image, index) => (
+            <div key={index} className="carousel-slide">
+              <img
+                src={image}
+                alt={`Slide ${index + 1}`}
+                className="carousel-image"
+              />
+            </div>
+          ))}
+        </Slider>
+      </div>
+    </>
   );
 };
 

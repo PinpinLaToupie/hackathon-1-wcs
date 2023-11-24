@@ -77,3 +77,10 @@ body {
 
 /* CAROUSEL */
 
+.carouselTitle {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  text-align: center;
+  margin-bottom: 80px;
+  z-index: 1;
+}

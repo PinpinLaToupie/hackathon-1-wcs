@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useRef, useState } from "react";
 import Konva from "konva";
 
@@ -152,7 +153,7 @@ const SelectBgLogo = () => {
         ))}
         <div className="achat">
           <button className="achat-btn" type="button">
-            Commander
+            Add to cart
           </button>
         </div>
       </div>
