@@ -2,8 +2,6 @@ footer {
   margin-top: auto;
 }
 
-
-
 /* CAROUSEL */
 
 .carousel-container {
@@ -16,28 +14,26 @@ footer {
 
 .carousel-slide {
   display: inline-block;
-
 }
- 
+
 .carousel-image {
   max-width: 60%;
   max-height: 200px;
-  border: 2px  #517751;
-  border-style:dotted;
+  border: 2px #517751;
+  border-style: dotted;
   background-color: white;
   border-radius: 10px;
   margin: 0.5rem;
-  padding:10px 15px;
+  padding: 10px 15px;
 }
 
 .carouselTitle {
-
   padding: 35px 0px 15px 0px;
   text-align: center;
   z-index: 1;
-    color: white;
-      font-family: "Mountains of Christmas";
-      font-size: calc(6vh - 1vh);
+  color: white;
+  font-family: "Mountains of Christmas";
+  font-size: calc(6vh - 1vh);
 }
 
 .carousel-section {
@@ -58,8 +54,6 @@ body {
   background-repeat: no-repeat;
 }
 
-
-
 /* ABOUT US */
 
 .aboutus-container {
@@ -67,6 +61,8 @@ body {
   width: auto;
   height: 100vh;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .aboutus-container video {
@@ -98,5 +94,6 @@ body {
   transition: background-color 0.2s, box-shadow 0.5s;
 }
 
-
-
+.aboutus-button {
+  z-index: 1000;
+}
