@@ -2,24 +2,23 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap: 3rem;
-  background: #e75656;
+  background: #3b4f3b;
 }
 
 .logo {
-  width: 5%;
+  width: 4%;
 }
 header ul {
   list-style: none;
   display: flex;
   margin: 0;
-  margin-left: 80rem;
+  margin-left: 70rem;
   padding: 0;
 }
 
 header li {
-  margin-right: 5rem;
-  font-size: 30px;
+  margin-right: 1rem;
+  font-size: 20px;
   font-style: normal;
   color: white;
   font-weight: bold;
@@ -28,11 +27,120 @@ header li {
 
 header h1 {
   font-family: "Mountains of Christmas";
-  font-size: 50px;
+  font-size: 3rem;
   font-style: normal;
   font-variant: normal;
   font-weight: 800;
   padding-left: 2rem;
-  color: #517751;
-  text-shadow: 0 0 9px white;
+  color: whitesmoke;
+  text-shadow: 0 0 9px #517751;
+}
+
+/* MUSIC BUTTON HOME */
+
+.music-toggle {
+  position: absolute;
+  top: 4.3%;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 12%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.music-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.home-button {
+  position: absolute;
+  top: 5%;
+  left: 85%;
+  transform: translate(-1%, -1%);
+  width: 35px;
+  height: 35px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.5s;
+}
+
+.panier-button {
+  position: absolute;
+  top: 5%;
+  left: 91%;
+  transform: translate(-1%, -1%);
+  width: 35px;
+  height: 35px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.5s;
+}
+
+/* Pop-up */
+
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.achat-btn {
+  font-size: 1rem;
+}
+
+.cart-img {
+  margin-bottom: 10px;
+  width: calc(80% - 50px);
+}
+
+.titleMoula {
+  font-size: 2.5rem;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.cart {
+  padding: 20px 0;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popup {
+  background-color: #517751;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  padding-left: 8rem;
+}
+
+.popup button.close {
+  background-color: #3b4f3b;
+  border-style: none;
+  color: white;
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+}
+
+.popup button.close:hover {
+  background-color: #e75656;
 }

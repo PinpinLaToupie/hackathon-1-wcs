@@ -1,6 +1,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "../index.css";
 
 function App() {
   return (
@@ -39,29 +40,34 @@ const Carousel = () => {
   ];
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 350,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 2,
     autoplay: true,
     autoplaySpeed: 2000,
   };
 
   return (
-    <div className="carousel-container">
-      <Slider {...settings}>
-        {imgCarrousel.map((image, index) => (
-          <div key={index} className="carousel-slide">
-            <img
-              src={image}
-              alt={`Slide ${index + 1}`}
-              className="carousel-image"
-            />
-          </div>
-        ))}
-      </Slider>
-    </div>
+    <section className="carousel-section">
+      <div>
+        <h1 className="carouselTitle">Our collection</h1>
+      </div>
+      <div className="carousel-container">
+        <Slider {...settings}>
+          {imgCarrousel.map((image, index) => (
+            <div key={index} className="carousel-slide">
+              <img
+                src={image}
+                alt={`Slide ${index + 1}`}
+                className="carousel-image"
+              />
+            </div>
+          ))}
+        </Slider>
+      </div>
+    </section>
   );
 };
 

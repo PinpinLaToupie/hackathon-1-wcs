@@ -1,13 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import Konva from "konva";
 
+import "./selectBgLogo.css";
+
 const motifs = [
   "/src/assets/motifs/50.png",
   "/src/assets/motifs/dauphin.png",
   "/src/assets/motifs/dino.png",
   "/src/assets/motifs/fish.png",
   "/src/assets/motifs/flamanRose.png",
-  "/src/assets/motifs/galaxy_bg.png",
   "/src/assets/motifs/hamster.png",
   "/src/assets/motifs/hang_santa.png",
   "/src/assets/motifs/hat-01.png",
@@ -27,7 +28,18 @@ const motifs = [
   "/src/assets/motifs/vache.png",
 ];
 
-const SweatCustom = ({ selectedImage }) => {
+const motifPulls = [
+  "/laine-pull.png",
+  "/pull1.1.png",
+  "/pull2.2.png",
+  "/pull3.3.png",
+  "/pull4.4.png",
+  "/pull5.5.png",
+  "/pull6.6.png",
+  "/pull7.7.png",
+];
+
+const SweatCustom = ({ selectedImage, selectedPull }) => {
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -35,74 +47,122 @@ const SweatCustom = ({ selectedImage }) => {
     const height = window.innerHeight;
 
     const imageObj = new Image();
-    imageObj.onload = function () {
-      drawImage(imageObj, width, height);
+    const pullImageObj = new Image();
+
+    const loadImages = async () => {
+      await new Promise((resolve, reject) => {
+        imageObj.onload = resolve;
+        imageObj.onerror = reject;
+        imageObj.src = selectedImage;
+      });
+
+      await new Promise((resolve, reject) => {
+        pullImageObj.onload = resolve;
+        pullImageObj.onerror = reject;
+        pullImageObj.src = selectedPull;
+      });
+
+      drawImages(imageObj, pullImageObj, width, height);
     };
 
-    imageObj.src = selectedImage;
-  }, [containerRef, selectedImage]);
+    loadImages();
+  }, [containerRef, selectedImage, selectedPull]);
 
-  const drawImage = (imageObj, width, height) => {
+  const drawImages = (imageObj, pullImageObj, width, height) => {
     const stage = new Konva.Stage({
       container: containerRef.current,
-      width: width,
-      height: height,
+      width: 1850,
+      height: 500,
     });
 
     const layer = new Konva.Layer();
-    const darthVaderImg = new Konva.Image({
+
+    const logoImg = new Konva.Image({
       image: imageObj,
-      x: stage.width() / 2 - 200 / 2,
-      y: stage.height() / 2 - 137 / 2,
+      x: stage.width() / 2 - 200 / 2 + 220,
+      y: stage.height() / 2 - 137 / 2 - 30,
       width: 200,
       height: 137,
       draggable: true,
     });
 
-    darthVaderImg.on("mouseover", function () {
+    logoImg.on("mouseover", function () {
       document.body.style.cursor = "pointer";
     });
 
-    darthVaderImg.on("mouseout", function () {
+    logoImg.on("mouseout", function () {
       document.body.style.cursor = "default";
     });
 
-    layer.add(darthVaderImg);
+    const pullImg = new Konva.Image({
+      image: pullImageObj,
+      x: pullImageObj.src.includes("/laine-pull.png")
+        ? stage.width() / 2 - 530 / 2 + 50
+        : stage.width() / 2 - 170 / 2,
+      y: pullImageObj.src.includes("/laine-pull.png")
+        ? stage.height() / 2 - 780 / 2 + 50
+        : stage.height() / 2 - 550 / 2,
+      width: pullImageObj.src.includes("/laine-pull.png") ? 840 : 600,
+      height: pullImageObj.src.includes("/laine-pull.png") ? 680 : 540,
+    });
+
+    layer.add(pullImg);
+    layer.add(logoImg);
+
     stage.add(layer);
   };
 
-  return (
-    <div>
-      <div className="sweat-custom-container" ref={containerRef}></div>
-    </div>
-  );
+  return <div className="divfdp" ref={containerRef}></div>;
 };
 
-const CombinedComponent = () => {
+const SelectBgLogo = () => {
   const [selectedImage, setSelectedImage] = useState(
     "/src/assets/motifs/50.png"
   );
 
+  const [selectedPull, setSelectedPull] = useState("/laine-pull.png");
+
   return (
-    <div>
-      <SweatCustom selectedImage={selectedImage} />
-      <p>Choose a motif:</p>
-      {motifs.map((imagePath, index) => (
-        <img
-          key={index}
-          src={imagePath}
-          alt={`Image ${index + 1}`}
-          style={{
-            width: "50px",
-            height: "50px",
-            marginRight: "10px",
-            cursor: "pointer",
-          }}
-          onClick={() => setSelectedImage(imagePath)}
+    <>
+      <div className="Container">
+        <h1 className="textSelector">Make your jumper !</h1>
+        <div className="pulls-container">
+          {motifPulls.map((pullPath, index) => (
+            <img
+              key={index}
+              src={pullPath}
+              alt={`Pull ${index + 1}`}
+              className={
+                selectedPull === pullPath ? "selected-pull pull" : "pull"
+              }
+              onClick={() => setSelectedPull(pullPath)}
+            />
+          ))}
+        </div>
+        <SweatCustom
+          selectedImage={selectedImage}
+          selectedPull={selectedPull}
         />
-      ))}
-    </div>
+      </div>
+
+      <div className="img-selector">
+        {motifs.map((imagePath, index) => (
+          <img
+            key={index}
+            src={imagePath}
+            alt={`Image ${index + 1}`}
+            className={selectedImage === imagePath ? "selected motif" : "motif"}
+            onClick={() => setSelectedImage(imagePath)}
+          />
+        ))}
+      </div>
+      <div className="achat">
+        <button className="achat-btn" type="button">
+          Add to cart
+        </button>
+      </div>
+    </>
   );
 };
 
-export default CombinedComponent;
+export default SelectBgLogo;

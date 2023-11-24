@@ -1,0 +1,126 @@
+.selected {
+  width: 100px;
+  height: auto;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.pulls-container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  margin-left: 20%;
+  margin-right: 20%;
+  border: 2px dotted white;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.Container img {
+  object-fit: scale-down;
+}
+.img-selector {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  margin-bottom: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
+  border: 2px dotted white;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.Container h1 {
+  color: white;
+  font-family: "Mountains of Christmas";
+  font-size: calc(6vh - 1vh);
+}
+.achat {
+  display: flex;
+  justify-content: center;
+}
+.achat-btn {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: calc(3vh - 1vh);
+  margin: 20px 15px 80px 15px;
+  padding: 8px 14px;
+  background-color: #2b472b;
+  border-style: none;
+}
+.achat-btn:hover {
+  background-color: #e75656;
+}
+
+canvas {
+  height: 200px;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.textSelector {
+  color: white;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
+
+}
+
+.sweat-custom-container {
+  background-image: url("/Calque_1.png");
+  background-repeat: no-repeat;
+  max-height: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+.draggable-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.konvajs-content {
+  width: 100%;
+  height: 100px;
+  background-repeat: no-repeat;
+}
+
+.frame {
+  display: flex;
+  flex-direction: column;
+}
+
+.selected .motif {
+  width: 100px;
+  height: auto;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.motif {
+  width: 100px;
+  height: auto;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.pull {
+  width: 100px;
+  height: auto;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.divfdp {
+  margin: 150px;
+}
+
+.cart-count {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3rem;
+}

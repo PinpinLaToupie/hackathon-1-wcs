@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -20,7 +21,8 @@ footer {
   width: 80%;
   margin: auto;
   text-align: center;
-  margin-top: -60px;
+  margin-bottom: 60px;
+  padding-bottom: 40px;
 }
 
 .carousel-slide {
@@ -29,33 +31,87 @@ footer {
 
 .carousel-image {
   max-width: 60%;
+  max-height: 200px;
+  border: 2px #517751;
+  border-style: dotted;
+  background-color: white;
   max-height: 250px;
   border: 2px solid #e75656;
   border-radius: 10px;
   margin: 0.5rem;
+  padding: 10px 15px;
 }
 
-.sweat-custom-container {
-  background-image: url("/Calque_1.png");
-  background-repeat: no-repeat;
-  /* background-color: brown; */
+.carouselTitle {
+  padding: 35px 0px 15px 0px;
+  text-align: center;
+  z-index: 1;
+  color: white;
+  font-family: "Mountains of Christmas";
+  font-size: calc(6vh - 1vh);
 }
 
-.draggable-image {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  cursor: pointer;
+.carousel-section {
+  background-color: #517751;
 }
 
-.konvajs-content {
-  width: 100%;
+/* BACKGROUND */
+
+body,
+html {
   height: 100%;
-  background-repeat: no-repeat;
+  margin: 0;
 }
 
 body {
+  background-image: url("./assets/Background3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* ABOUT US */
+
+.aboutus-container {
+  position: relative;
+  width: auto;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutus-container video {
+  width: auto;
+  height: auto;
+}
+
+.transparent-button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #fff;
+}
+
+.aboutus-button {
+  position: absolute;
+  top: 10%;
+  left: 93%;
+  transform: translate(-1%, -1%);
+  width: 35px;
+  height: 35px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.5s;
+}
+
+.aboutus-button {
+  z-index: 1000;
+}
   background-image: url("./assets/Background2.png");
   object-fit: cover;
 }
