@@ -45,7 +45,7 @@ function Header() {
             <p className="textMoula">
               Cart Total (VAT included) : 2399,99 {"\u20AC"}
             </p>
-            <p>PAS CHER !</p>
+            <p>NOT EXPENSIVE !</p>
             <button className="achat-btn" type="button">
               Proceed to checkout
             </button>

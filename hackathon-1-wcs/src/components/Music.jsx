@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 function Playginmusic() {
-  const [isMusicPlaying, setIsMusicPlaying] = useState(false);
+  const [isMusicPlaying, setIsMusicPlaying] = useState(true);
 
   useEffect(() => {
     const audioElement = document.getElementById("background-music");
