@@ -1,0 +1,19 @@
+.img404 {
+  margin-left: 50rem;
+}
+
+.button404 {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #517751;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: -15rem;
+}
+
+.button404:hover {
+  background-color: #e75656;
+}
