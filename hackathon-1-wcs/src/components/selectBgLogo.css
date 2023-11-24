@@ -24,6 +24,25 @@
 color: white;
 font-family: Arial, Helvetica, sans-serif;
 }
+.achat {
+display: flex;
+justify-content: center;
+}
+.achat-btn{
+  display: flex;
+  justify-content: center;
+color: white;
+  max-width: 120px;
+  margin: 20px 15px;
+  padding: 8px 14px;
+      background-color: #2b472b;
+
+  border-style: none;
+  border-radius: 3px;
+}
+.achat-btn:hover {
+  background-color: #e75656;
+}
 
 canvas {
 height: 200px;

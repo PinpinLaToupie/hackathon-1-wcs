@@ -129,6 +129,11 @@ const SelectBgLogo = () => {
             onClick={() => setSelectedImage(imagePath)}
           />
         ))}
+        <div className="achat">
+          <button className="achat-btn" type="button">
+            Commander
+          </button>
+        </div>
       </div>
     </>
   );
