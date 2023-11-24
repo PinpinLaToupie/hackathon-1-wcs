@@ -71,7 +71,7 @@ const SweatCustom = ({ selectedImage, selectedPull }) => {
   const drawImages = (imageObj, pullImageObj, width, height) => {
     const stage = new Konva.Stage({
       container: containerRef.current,
-      width: 2000,
+      width: 1850,
       height: 500,
     });
 
