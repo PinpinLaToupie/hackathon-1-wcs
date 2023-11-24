@@ -125,7 +125,7 @@ const SelectBgLogo = () => {
   return (
     <>
       <div className="Container">
-        <h1 className="textSelector">Choose a logo !</h1>
+        <h1 className="textSelector">Make your jumper !</h1>
         <div className="pulls-container">
           {motifPulls.map((pullPath, index) => (
             <img
