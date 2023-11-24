@@ -10,7 +10,6 @@ const motifs = [
   "/src/assets/motifs/dino.png",
   "/src/assets/motifs/fish.png",
   "/src/assets/motifs/flamanRose.png",
-  "/src/assets/motifs/galaxy_bg.png",
   "/src/assets/motifs/hamster.png",
   "/src/assets/motifs/hang_santa.png",
   "/src/assets/motifs/hat-01.png",
@@ -31,6 +30,7 @@ const motifs = [
 ];
 
 const motifPulls = [
+  "/laine-pull.png",
   "/pull1.1.png",
   "/pull2.2.png",
   "/pull3.3.png",
@@ -71,7 +71,7 @@ const SweatCustom = ({ selectedImage, selectedPull }) => {
   const drawImages = (imageObj, pullImageObj, width, height) => {
     const stage = new Konva.Stage({
       container: containerRef.current,
-      width: 1500,
+      width: 2000,
       height: 500,
     });
 
@@ -79,8 +79,8 @@ const SweatCustom = ({ selectedImage, selectedPull }) => {
 
     const logoImg = new Konva.Image({
       image: imageObj,
-      x: stage.width() / 2 - 200 / 2,
-      y: stage.height() / 2 - 137 / 2,
+      x: stage.width() / 2 - 200 / 2 + 220,
+      y: stage.height() / 2 - 137 / 2 - 30,
       width: 200,
       height: 137,
       draggable: true,
@@ -96,10 +96,14 @@ const SweatCustom = ({ selectedImage, selectedPull }) => {
 
     const pullImg = new Konva.Image({
       image: pullImageObj,
-      x: stage.width() / 2 - 170 / 2,
-      y: stage.height() / 2 - 550 / 2,
-      width: 600,
-      height: 540,
+      x: pullImageObj.src.includes("/laine-pull.png")
+        ? stage.width() / 2 - 530 / 2 + 50
+        : stage.width() / 2 - 170 / 2,
+      y: pullImageObj.src.includes("/laine-pull.png")
+        ? stage.height() / 2 - 780 / 2 + 50
+        : stage.height() / 2 - 550 / 2,
+      width: pullImageObj.src.includes("/laine-pull.png") ? 840 : 600,
+      height: pullImageObj.src.includes("/laine-pull.png") ? 680 : 540,
     });
 
     layer.add(pullImg);
@@ -108,7 +112,7 @@ const SweatCustom = ({ selectedImage, selectedPull }) => {
     stage.add(layer);
   };
 
-  return <di ref={containerRef}></di>;
+  return <div className="divfdp" ref={containerRef}></div>;
 };
 
 const SelectBgLogo = () => {
@@ -116,7 +120,7 @@ const SelectBgLogo = () => {
     "/src/assets/motifs/50.png"
   );
 
-  const [selectedPull, setSelectedPull] = useState("/pull1.1.png");
+  const [selectedPull, setSelectedPull] = useState("/laine-pull.png");
 
   return (
     <>
