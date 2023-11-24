@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import './Page404.css';
+import "./Page404.css";
 
 function Page404() {
   // eslint-disable-next-line react/no-unescaped-entities
   return (
-    <div>
+    <div className="erreur404">
       <p>Oops the grinch stole your sweaters !</p>
       <img className="img404" src="/grinch.png" alt="Grinch" />
       <Link to="/">
