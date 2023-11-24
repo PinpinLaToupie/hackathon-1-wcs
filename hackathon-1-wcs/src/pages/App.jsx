@@ -50,7 +50,7 @@ const Carousel = () => {
   };
 
   return (
-    <>
+    <section className="carousel-section">
       <div>
         <h1 className="carouselTitle">Our collection</h1>
       </div>
@@ -67,7 +67,7 @@ const Carousel = () => {
           ))}
         </Slider>
       </div>
-    </>
+    </section>
   );
 };
 
