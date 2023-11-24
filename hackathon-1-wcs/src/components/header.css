@@ -2,7 +2,7 @@ header {
   display: flex;
   justify-content: baseline;
   align-items: center;
-  background: #e75656;
+  background: #3b4f3b;
 }
 
 .logo {
@@ -27,20 +27,20 @@ header li {
 
 header h1 {
   font-family: "Mountains of Christmas";
-  font-size: 2.4rem;
+  font-size: 3rem;
   font-style: normal;
   font-variant: normal;
   font-weight: 800;
   padding-left: 2rem;
-  color: #517751;
-  text-shadow: 0 0 9px white;
+  color: whitesmoke;
+  text-shadow: 0 0 9px #517751;
 }
 
 /* MUSIC BUTTON HOME */
 
 .music-toggle {
   position: absolute;
-  top: 20px;
+  top: 4.3%;
   right: 20px;
   width: 50px;
   height: 50px;
@@ -59,7 +59,7 @@ header h1 {
 
 .home-button {
   position: absolute;
-  top: 3%;
+  top: 5%;
   left: 85%;
   transform: translate(-1%, -1%);
   width: 35px;
@@ -75,7 +75,7 @@ header h1 {
 
 .panier-button {
   position: absolute;
-  top: 3%;
+  top: 5%;
   left: 91%;
   transform: translate(-1%, -1%);
   width: 35px;

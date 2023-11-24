@@ -36,6 +36,7 @@ const motifPulls = [
   "/pull4.4.png",
   "/pull5.5.png",
   "/pull6.6.png",
+  "/pull7.7.png",
 ];
 
 const SweatCustom = ({ selectedImage, selectedPull }) => {
@@ -124,7 +125,7 @@ const SelectBgLogo = () => {
   return (
     <>
       <div className="Container">
-        <h1 className="textSelector">Choose a logo !</h1>
+        <h1 className="textSelector">Make your jumper !</h1>
         <div className="pulls-container">
           {motifPulls.map((pullPath, index) => (
             <img
@@ -154,11 +155,11 @@ const SelectBgLogo = () => {
             onClick={() => setSelectedImage(imagePath)}
           />
         ))}
-        <div className="achat">
-          <button className="achat-btn" type="button">
-            Add to cart
-          </button>
-        </div>
+      </div>
+      <div className="achat">
+        <button className="achat-btn" type="button">
+          Add to cart
+        </button>
       </div>
     </>
   );
