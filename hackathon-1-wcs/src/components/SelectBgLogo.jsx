@@ -12,8 +12,6 @@ const motifs = [
   "/src/assets/motifs/hamster.png",
   "/src/assets/motifs/hang_santa.png",
   "/src/assets/motifs/hat-01.png",
-  "/src/assets/motifs/hat-02.png",
-  "/src/assets/motifs/hat-03.png",
   "/src/assets/motifs/hat.png",
   "/src/assets/motifs/loup.png",
   "/src/assets/motifs/panda.png",
@@ -33,7 +31,6 @@ const motifs = [
   "/src/assets/motifs/Punaise.png",
   "/src/assets/motifs/Punaiserun.png",
   "/src/assets/motifs/Blobfish.png",
-  "/src/assets/motifs/Mr. Props.png",
   "/src/assets/motifs/Benoit.png",
   "/src/assets/motifs/AnthoMalade.png",
   "/src/assets/motifs/BaptisteBlob.png",
@@ -94,8 +91,8 @@ const SweatCustom = ({ selectedImage, selectedPull }) => {
       image: imageObj,
       x: stage.width() / 2 - 200 / 2 + 220,
       y: stage.height() / 2 - 137 / 2 - 30,
-      width: 200,
-      height: 137,
+      width: 230,
+      height: 190,
       draggable: true,
     });
 

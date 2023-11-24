@@ -18,6 +18,7 @@
 .Container img {
   object-fit: scale-down;
 }
+
 .img-selector {
   display: grid;
   grid-template-columns: repeat(11, 1fr);
@@ -63,7 +64,6 @@ canvas {
   text-align: center;
   margin-top: 30px;
   margin-bottom: 40px;
-
 }
 
 .sweat-custom-container {
@@ -96,22 +96,20 @@ canvas {
 .selected .motif {
   width: 100px;
   height: auto;
-  margin-right: 10px;
   cursor: pointer;
 }
 
 .motif {
   width: 100px;
   height: auto;
-  margin-right: 10px;
   cursor: pointer;
   border-radius: 5px;
+  margin: auto;
 }
 
 .pull {
   width: 100px;
   height: auto;
-  margin-right: 10px;
   cursor: pointer;
 }
 
