@@ -21,13 +21,13 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 .achat {
-display: flex;
-justify-content: center;
-}
-.achat-btn{
   display: flex;
   justify-content: center;
-color: white;
+}
+.achat-btn {
+  display: flex;
+  justify-content: center;
+  color: white;
   max-width: 120px;
   margin: 40px 15px;
   padding: 8px 14px;
@@ -102,4 +102,8 @@ canvas {
   cursor: pointer;
   border-radius: 5px;
   border: 2px solid #e75656;
+}
+
+.divfdp {
+  margin: 150px;
 }
