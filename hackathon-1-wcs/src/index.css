@@ -10,8 +10,8 @@ footer {
   width: 80%;
   margin: auto;
   text-align: center;
-  margin-bottom: 40px;
-  padding-bottom: 20px;
+  margin-bottom: 60px;
+  padding-bottom: 40px;
 }
 
 .carousel-slide {
@@ -21,11 +21,13 @@ footer {
  
 .carousel-image {
   max-width: 60%;
-  max-height: 250px;
-  border: 2px solid #e75656;
+  max-height: 200px;
+  border: 2px  #517751;
+  border-style:dotted;
   background-color: white;
   border-radius: 10px;
   margin: 0.5rem;
+  padding:10px 15px;
 }
 
 .carouselTitle {
