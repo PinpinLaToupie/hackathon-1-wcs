@@ -26,6 +26,19 @@ const motifs = [
   "/src/assets/motifs/reinder.png",
   "/src/assets/motifs/supermanSanta.png",
   "/src/assets/motifs/vache.png",
+  "/src/assets/motifs/Dog.png",
+  "/src/assets/motifs/Alien.png",
+  "/src/assets/motifs/COD.png",
+  "/src/assets/motifs/Singe.png",
+  "/src/assets/motifs/Punaise.png",
+  "/src/assets/motifs/Punaiserun.png",
+  "/src/assets/motifs/Blobfish.png",
+  "/src/assets/motifs/Mr. Props.png",
+  "/src/assets/motifs/Benoit.png",
+  "/src/assets/motifs/AnthoMalade.png",
+  "/src/assets/motifs/BaptisteBlob.png",
+  "/src/assets/motifs/BenoitScare.png",
+  "/src/assets/motifs/Christopher.png",
 ];
 
 const motifPulls = [
