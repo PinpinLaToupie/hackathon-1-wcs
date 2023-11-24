@@ -37,6 +37,7 @@ const motifPulls = [
   "/pull4.4.png",
   "/pull5.5.png",
   "/pull6.6.png",
+  "/pull7.7.png",
 ];
 
 const SweatCustom = ({ selectedImage, selectedPull }) => {
@@ -155,11 +156,11 @@ const SelectBgLogo = () => {
             onClick={() => setSelectedImage(imagePath)}
           />
         ))}
-        <div className="achat">
-          <button className="achat-btn" type="button">
-            Add to cart
-          </button>
-        </div>
+      </div>
+      <div className="achat">
+        <button className="achat-btn" type="button">
+          Add to cart
+        </button>
       </div>
     </>
   );
