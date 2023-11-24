@@ -74,3 +74,13 @@ body {
   cursor: pointer;
   transition: background-color 0.2s, box-shadow 0.5s;
 }
+
+/* CAROUSEL */
+
+.carouselTitle {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  text-align: center;
+  margin-bottom: 80px;
+  z-index: 1;
+}

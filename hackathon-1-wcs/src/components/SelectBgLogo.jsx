@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useRef, useState } from "react";
 import Konva from "konva";
 
@@ -150,6 +151,11 @@ const SelectBgLogo = () => {
             onClick={() => setSelectedImage(imagePath)}
           />
         ))}
+        <div className="achat">
+          <button className="achat-btn" type="button">
+            Add to cart
+          </button>
+        </div>
       </div>
     </>
   );
