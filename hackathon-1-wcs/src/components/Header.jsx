@@ -9,9 +9,14 @@ function Header() {
       <h1>Ugly Christmas Jumper Maker</h1>
       <nav className="header-nav">
         <ul className="possibilities">
+        <Link to="/">
+            <div className="panier-button">
+              <img src="./panier.png" alt="Panier" />
+            </div>
+          </Link>
           <Link to="/">
             <div className="home-button">
-              <img src="./home-picto-05.png" alt="home" />
+              <img src="./home-picto-05.png" alt="Home" />
             </div>
           </Link>{" "}
         </ul>

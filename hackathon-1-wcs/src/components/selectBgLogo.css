@@ -24,6 +24,7 @@
 canvas {
   height: 200px;
   width: 100%;
+  margin-top: 1rem;
 }
 
 .textSelector {
@@ -71,6 +72,8 @@ canvas {
   height: auto;
   margin-right: 10px;
   cursor: pointer;
+  border-radius: 5px;
+  border: 2px solid #e75656;
 }
 
 .pull {
@@ -78,4 +81,6 @@ canvas {
   height: auto;
   margin-right: 10px;
   cursor: pointer;
+  border-radius: 5px;
+  border: 2px solid #e75656;
 }

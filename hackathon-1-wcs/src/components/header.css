@@ -60,6 +60,22 @@ header h1 {
 .home-button {
   position: absolute;
   top: 3%;
+  left: 85%;
+  transform: translate(-1%, -1%);
+  width: 35px;
+  height: 35px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.5s;
+}
+
+.panier-button {
+  position: absolute;
+  top: 3%;
   left: 91%;
   transform: translate(-1%, -1%);
   width: 35px;
