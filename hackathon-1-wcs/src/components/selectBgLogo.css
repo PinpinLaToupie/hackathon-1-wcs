@@ -7,18 +7,34 @@
 
 .pulls-container {
   display: grid;
-  grid-template-columns: repeat(15, 1fr);
+  grid-template-columns: repeat(8, 1fr);
+  margin-left:20%;
+  margin-right: 20%;
+        border: 2px solid #e75656;
+          border-radius: 5px;
+          padding: 15px;
+
 }
+
 .Container img {
   object-fit: scale-down;
 }
 .img-selector {
-  margin-bottom: 80px;
+  display: grid;
+    grid-template-columns: repeat(11, 1fr);
+  margin-bottom: 50px;
+    margin-left: 10%;
+      margin-right: 10%;
+      border: 2px solid #e75656;
+        border-radius: 5px;
+        padding: 15px;
+     
 }
 
 .Container h1 {
   color: white;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Mountains of Christmas";
+  font-size: calc(6vh - 1vh);
 }
 .achat {
   display: flex;
@@ -28,13 +44,13 @@
   display: flex;
   justify-content: center;
   color: white;
-  max-width: 120px;
+ font-size: calc(3vh - 1vh);
   margin: 40px 15px;
   padding: 8px 14px;
   background-color: #2b472b;
 
   border-style: none;
-  border-radius: 3px;
+
 }
 .achat-btn:hover {
   background-color: #e75656;
@@ -92,7 +108,6 @@ canvas {
   margin-right: 10px;
   cursor: pointer;
   border-radius: 5px;
-  border: 2px solid #e75656;
 }
 
 .pull {
@@ -100,8 +115,7 @@ canvas {
   height: auto;
   margin-right: 10px;
   cursor: pointer;
-  border-radius: 5px;
-  border: 2px solid #e75656;
+
 }
 
 .divfdp {
