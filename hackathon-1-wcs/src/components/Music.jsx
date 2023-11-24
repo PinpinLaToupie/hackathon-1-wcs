@@ -1,36 +1,39 @@
-import useSound from "use-sound";
-import react from "react";
-import Sound from "../assets/MariaCarrey.mp3";
-import speack from "../assets/Speaker_Icon.svg";
-import mute from "../assets/Mute_Icon.svg";
-
-let src = mute;
+import { useState, useEffect } from "react";
 
 function Playginmusic() {
-  const [isPlaying, setIsPLaying] = react.useState(false);
-  const [play, { stop }] = useSound(Sound, { volume: 0.2 });
-  const lunchMusic = () => {
-    setIsPLaying(!isPlaying);
-    if (isPlaying === false) {
-      play();
-      src = speack;
+  const [isMusicPlaying, setIsMusicPlaying] = useState(false);
+
+  useEffect(() => {
+    const audioElement = document.getElementById("background-music");
+
+    if (isMusicPlaying) {
+      audioElement.play();
     } else {
-      stop();
-      src = mute;
+      audioElement.pause();
     }
+
+    return () => {};
+  }, [isMusicPlaying]);
+
+  const toggleMusic = () => {
+    setIsMusicPlaying(!isMusicPlaying);
   };
 
   return (
-    <div>
-      <img
-        src="./asset/son.png"
-        id="music"
-        onClick={() => {
-          lunchMusic();
-        }}
-      />
-      <img src={src} alt="speacker" className="w-16 pr-3 self-center" />
+    <div className="home-container">
+      <button type="button" onClick={toggleMusic} className="music-toggle">
+        {isMusicPlaying ? (
+          <img src="hp-on.png" alt="Sound On" />
+        ) : (
+          <img src="hp-off.png" alt="Sound Off" />
+        )}
+      </button>
+      <audio id="background-music" loop>
+        <source src="./Mariah.mp3" type="audio/mpeg" />
+        <track kind="captions" label="French" srcLang="fr" src="" default />
+      </audio>
     </div>
   );
 }
+
 export default Playginmusic;
